@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quantification Graph</title>
+	<style>
+		body{
+			background-color:black;
+			text-align:center;
+			}
+	</style>
+</head>
+
+<body>
+	<div id="SVGcontainer">
+		<svg id="chart" width="600" height="600"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-150 -150  900 900" preserveAspectRatio="xMidYMid meet">
+		</svg>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="quantification-g.js"></script>
+	<script>
+		var Chart = {
+			title: "Number of users per section",
+			maxItemsBySection:20,
+			sections: [ "Lipton App", "E-Medics Website","Internal Company Website","LiveChat","RoboChat", "Smart-Home","PWA Calendar"],
+			groups: ["Back End","Front End","Android","iOS",],
+			colors : ["#E57373","#f751d8","#00DBFF","#AAF2AD"],
+			arcColor: "white",
+			centerColor : "white",
+			centerStroke: "black",
+			annotationDistance : 130,
+			data : [
+			[1,1,2,2],
+			[2,2,2,2],	
+			[1,2,0,0],
+			[2,1,1,1],
+			[2,1,1,1],	
+			[3,0,2,2],
+			[3,3,0,0],
+			],
+		};
+
+
+		DrawChart(Chart);
+	</script>
+</body>
+</html>
